@@ -1,56 +1,89 @@
 body {
-    color: #333333;
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 0 16px;
+	color: rgba(214, 87, 128);
+	font-family: Arial, Helvetica, sans-serif;
+	max-width: 650px;
+	margin: 0 auto;
+	padding: 0 16px;
 
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(
+		to top right,
+		rgba(153, 178, 221),
+		rgba(194, 249, 187)
+	);
 }
 
 .main-content {
-    flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-grow: 1;
+}
+
+.about-paragraph {
+	width: 60%;
+	margin: 2em;
 }
 
 footer {
-    color: #888888;
-    border-top: 1px solid #eeeeee;
-    margin-top: 16px;
-    padding: 16px 0;
+	color: #888888;
+	border-top: 1px solid #eeeeee;
+	margin-top: 16px;
+	padding: 16px 0;
 }
 
 header {
-    margin-top: 16px;
-    margin-bottom: 48px;
+	color: white;
+	margin-bottom: 2em;
+	padding: 2em;
+	border-bottom: 2px solid #99b2dd;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* background-color: rebeccapurple; */
+	background: linear-gradient(to left, rgba(153, 178, 221), rebeccapurple);
+}
+
+.header-links {
+	font-size: 2em;
+}
+
+.header-title {
 }
 
 h1 {
-    font-size: 64px;
-    margin-bottom: 16px;
+	font-size: 64px;
+	margin-bottom: 16px;
 }
 
 header a {
-    color: #888888;
-    margin-right: 16px;
-    text-decoration: none;
+	/* color: #888888; */
+	color: white;
+	margin-right: 16px;
+	text-decoration: none;
 }
 
 .portrait {
-    width: 250px;
+	width: 250px;
 }
 
 input {
-    border: 1px solid #cccccc;
-    padding: 8px;
+	border: 3px solid rebeccapurple;
+	border-radius: 5px;
+	padding: 8px;
+	color: rebeccapurple;
 }
 
 button {
-    cursor: pointer;
-    border: 1px solid #888888;
-    background: #888888;
-    color: white;
-    padding: 8px;
+	cursor: pointer;
+	border: 3px solid #99b2dd;
+	border-radius: 10px;
+	background: rebeccapurple;
+	color: white;
+	padding: 8px;
 }
-
