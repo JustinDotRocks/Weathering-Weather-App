@@ -1,9 +1,16 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
 body {
 	color: rgba(214, 87, 128);
 	font-family: Arial, Helvetica, sans-serif;
-	max-width: 650px;
-	margin: 0 auto;
+	margin: 0;
 	padding: 0 16px;
+	width: 100vw;
 
 	display: flex;
 	flex-direction: column;
@@ -24,8 +31,13 @@ body {
 }
 
 .about-paragraph {
-	width: 60%;
+	width: 30%;
 	margin: 2em;
+	color: rebeccapurple;
+	font-weight: 700;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: large;
+	line-height: 1.75em;
 }
 
 footer {
@@ -33,6 +45,13 @@ footer {
 	border-top: 1px solid #eeeeee;
 	margin-top: 16px;
 	padding: 16px 0;
+	width: 100vw;
+}
+
+.footer-created-by {
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 2em;
 }
 
 header {
@@ -45,12 +64,15 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/* background-color: rebeccapurple; */
 	background: linear-gradient(to left, rgba(153, 178, 221), rebeccapurple);
 }
 
 .header-links {
-	font-size: 2em;
+	width: 100vw;
+	font-size: 1.5em;
+	padding: 0 1em;
+	display: flex;
+	justify-content: space-between;
 }
 
 h1 {
@@ -59,14 +81,29 @@ h1 {
 }
 
 header a {
-	/* color: #888888; */
 	color: white;
 	margin-right: 16px;
 	text-decoration: none;
 }
 
+p {
+	margin: 1em 0;
+}
+
+#message-1 {
+	color: rebeccapurple;
+	font-size: 2em;
+}
+
+#message-2 {
+	color: rebeccapurple;
+	font-size: 1.75em;
+}
+
 .portrait {
-	width: 250px;
+	width: 150px;
+	border: 1px solid green;
+	border-radius: 50%;
 }
 
 input {
@@ -83,4 +120,15 @@ button {
 	background: rebeccapurple;
 	color: white;
 	padding: 8px;
+}
+
+.about-svg {
+	width: 6em;
+	height: 6em;
+	margin: 2em;
+}
+
+.svg-container {
+	display: flex;
+	margin-top: 8em;
 }
