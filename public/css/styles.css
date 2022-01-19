@@ -6,42 +6,166 @@
 }
 
 body {
-	color: rgba(214, 87, 128);
-	font-family: Arial, Helvetica, sans-serif;
-	margin: 0;
-	padding: 0 16px;
+	/* color: rgba(214, 87, 128); */
+	font-family: 'Roboto', sans-serif;
 	width: 100vw;
+	color: rebeccapurple;
+	/* display: flex;
+	flex-direction: column; */
 
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	min-height: 100vh;
-	background: linear-gradient(
+	/* background: linear-gradient(
 		to top right,
 		rgba(153, 178, 221),
 		rgba(194, 249, 187)
-	);
+	); */
 }
 
 .main-content {
+	/* display: flex;
+	flex-direction: column; */
+	/* align-items: center; */
+}
+
+.top-container {
+	/* align-items: center; */
+}
+
+.bottom-container {
+}
+
+.video-wrapper {
+	/* Telling our absolute positioned video to 
+  be relative to this element */
+	position: relative;
+
+	/* Will not allow the video to overflow the 
+  container */
+	overflow: hidden;
+
+	/* Centering the container's content vertically 
+  and horizontally */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	flex-grow: 1;
+	justify-content: space-between;
+	width: 100vw;
+	height: 100vh;
+}
+/* .video-wrapper::-webkit-scrollbar {
+	display: none;
+} */
+
+video {
+	/** Simulationg background-size: cover */
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 40%;
+	z-index: -1;
 }
 
-.about-paragraph {
-	width: 30%;
-	margin: 2em;
+header {
+	color: black;
+	margin-bottom: 2em;
+	padding: 2em;
+	/* border-bottom: 2px solid #99b2dd; */
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* background: linear-gradient(to left, rgba(153, 178, 221), rebeccapurple); */
+	background: transparent;
+}
+
+.header-links {
+	width: 100vw;
+	font-size: 4em;
+	padding: 0 0.5em;
+	display: flex;
+	justify-content: space-between;
+}
+
+header a {
 	color: rebeccapurple;
-	font-weight: 700;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: large;
-	line-height: 1.75em;
+	margin-right: 16px;
+	text-decoration: none;
+}
+
+.top-text-container {
+	margin-top: 5em;
+	color: rebeccapurple;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1 {
+	font-size: 10em;
+	margin-bottom: 0.25em;
+}
+
+p {
+	font-size: 1.75em;
+}
+
+.info-container {
+	margin-bottom: 8em;
+	padding-left: 1em;
+}
+
+.search-address-container {
+	margin-bottom: 1em;
+	padding-left: 0.5em;
+}
+
+.bottom-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+input {
+	border: 3px solid rebeccapurple;
+	border-radius: 5px;
+	padding: 8px;
+	font-size: 3em;
+}
+
+button {
+	cursor: pointer;
+	border: 3px solid #99b2dd;
+	border-radius: 10px;
+	background: rebeccapurple;
+	color: white;
+	padding: 8px;
+	font-size: 3em;
+}
+
+form {
+	margin-top: 5em;
+}
+
+#message-1 {
+	color: rebeccapurple;
+	font-size: 32px;
+	margin-top: 0.5em;
+}
+
+#message-2 {
+	color: rebeccapurple;
+	margin: 2em 0.5em 0 0.5em;
+	font-size: 2.25em;
 }
 
 footer {
-	color: #888888;
+	color: rebeccapurple;
 	border-top: 1px solid #eeeeee;
 	margin-top: 16px;
 	padding: 16px 0;
@@ -54,72 +178,13 @@ footer {
 	margin-right: 2em;
 }
 
-header {
-	color: white;
-	margin-bottom: 2em;
-	padding: 2em;
-	border-bottom: 2px solid #99b2dd;
-	width: 100vw;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background: linear-gradient(to left, rgba(153, 178, 221), rebeccapurple);
-}
-
-.header-links {
-	width: 100vw;
-	font-size: 1.5em;
-	padding: 0 1em;
-	display: flex;
-	justify-content: space-between;
-}
-
-h1 {
-	font-size: 64px;
-	margin-bottom: 16px;
-}
-
-header a {
-	color: white;
-	margin-right: 16px;
-	text-decoration: none;
-}
-
-p {
-	margin: 1em 0;
-}
-
-#message-1 {
+.about-paragraph {
+	width: 30%;
+	margin: 2em;
 	color: rebeccapurple;
-	font-size: 2em;
-}
-
-#message-2 {
-	color: rebeccapurple;
-	font-size: 1.75em;
-}
-
-.portrait {
-	width: 150px;
-	border: 1px solid green;
-	border-radius: 50%;
-}
-
-input {
-	border: 3px solid rebeccapurple;
-	border-radius: 5px;
-	padding: 8px;
-	color: rebeccapurple;
-}
-
-button {
-	cursor: pointer;
-	border: 3px solid #99b2dd;
-	border-radius: 10px;
-	background: rebeccapurple;
-	color: white;
-	padding: 8px;
+	font-weight: 700;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.75em;
 }
 
 .about-svg {
@@ -131,4 +196,10 @@ button {
 .svg-container {
 	display: flex;
 	margin-top: 8em;
+}
+
+.portrait {
+	width: 150px;
+	border: 1px solid green;
+	border-radius: 50%;
 }
